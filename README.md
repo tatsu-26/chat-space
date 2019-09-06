@@ -4,7 +4,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index:true|
-|eamil|string|null: false|
 
 ### Association
 - has_many :groups_users
@@ -45,4 +44,4 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :user
+- belongs_to :group
