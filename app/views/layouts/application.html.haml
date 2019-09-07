@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpace
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .wrapper
+      .content-side
+        .left-header
+          .left-header__box
+            .left-header__box__user-name
+              aaa
+            %ul.left-header__box__menu
+              %li.left-header_box__menu__group-new
+                =link_to url, class: "left-header__box__menu__group-new__btn left-header__box__menu__group-new__btn--edit" do
+                  = fa_icon "edit", class: "left-header__box__menu__group-new__btn--icon"
+              %li.left-heaser_box__menu__user-edit
+                =link_to do
+                  = fa_icon "cog", class: "left-header_box__menu__user-edit__btn--icon"
+                      
+        .groups
+          .groups__group
+            .groups__group__group-name
+              test-group
+            .groups__group__message
+              test
+      .content
+        
+= yield
+    
