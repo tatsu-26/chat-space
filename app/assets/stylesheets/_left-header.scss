@@ -1,3 +1,4 @@
+@import "variable";
 .left-header {
   background-color: #253141;
   height: 100px;
@@ -5,7 +6,7 @@
   width: 250px;
   align-items: center;
   padding: 0 20px;
-  color: white;
+  color: $white;
   
 
   &__box {
@@ -22,7 +23,7 @@
       &__group-new{
         &__btn{
           &--edit{
-            color: white;
+            color: $white;
           }
           
         } 
@@ -30,7 +31,7 @@
       &__user-edit{
         &__btn{
           &--cog{
-            color: white;
+            color: $white;
           }
           
         } 

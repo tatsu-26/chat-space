@@ -3,9 +3,10 @@
 @import "left-header";
 @import "groups";
 @import "content";
+
 .wrapper{
     display: flex;
-    background-color: #fafafa;
+    background-color: $wrapper-color;
 }
 .content-side{ 
     height: calc(100vh - 100px);
