@@ -1,3 +1,4 @@
+
 !!!
 %html
   %head
@@ -7,27 +8,4 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .wrapper
-      .content-side
-        .left-header
-          .left-header__box
-            .left-header__box__user-name
-              aaa
-            %ul.left-header__box__menu
-              %li.left-header__box__menu__group-new
-                =link_to "", class: "left-header__box__menu__group-new__btn left-header__box__menu__group-new__btn--edit" do
-                  = fa_icon "edit", class: "post-icon"
-              %li.left-heaser__box__menu__user-edit
-                =link_to "", class: "left-header__box__menu__user-edit__btn left-header__box__menu__user-edit__btn--cog" do
-                  = fa_icon "cog", class: "post-icon"
-                      
-        .groups
-          .groups__group
-            .groups__group__group-name
-              test-group
-            .groups__group__message
-              test
-      .content
-        
-= yield
-    
+  = yield
