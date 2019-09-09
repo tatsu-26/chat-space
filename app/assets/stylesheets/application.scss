@@ -3,6 +3,9 @@
 @import "left-header";
 @import "groups";
 @import "content";
+@import "modules/user";
+@import "modules/flash";
+@import "variable";
 
 .wrapper{
     display: flex;

@@ -3,13 +3,13 @@
     .left-header
       .left-header__box
         .left-header__box__user-name
-          aaa
+          = current_user.name
         %ul.left-header__box__menu
           %li.left-header__box__menu__group-new
             =link_to "", class: "left-header__box__menu__group-new__btn left-header__box__menu__group-new__btn--edit" do
-              = fa_icon "edit", class: "post-icon"
+              = fa_icon "pencil-square-o", class: "post-icon"
           %li.left-heaser__box__menu__user-edit
-            =link_to "", class: "left-header__box__menu__user-edit__btn left-header__box__menu__user-edit__btn--cog" do
+            =link_to edit_user_path(current_user), class: "left-header__box__menu__user-edit__btn left-header__box__menu__user-edit__btn--cog" do
               = fa_icon "cog", class: "post-icon"
             
     .groups
