@@ -6,7 +6,7 @@
 @import "modules/user";
 @import "modules/flash";
 @import "variable";
-
+@import "modules/group";
 .wrapper{
     display: flex;
     background-color: $wrapper-color;
