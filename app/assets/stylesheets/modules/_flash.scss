@@ -1,0 +1,11 @@
+@import "variable";
+.falsh {
+  color: $white;
+  text-align: center;
+  &__alert{
+    background-color: #FF4500;
+  }
+  &__notice{
+    background-color: $blue;
+  }
+}

@@ -1,0 +1,22 @@
+@import "variable";
+.groups {
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0 20px;
+  width: 250px;
+  
+
+    &__group__group-name{
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: $white;
+    }
+    &__group__message{
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: $white;
+    }
+}
+

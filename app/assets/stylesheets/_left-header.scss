@@ -1,0 +1,44 @@
+@import "variable";
+.left-header {
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  width: 250px;
+  align-items: center;
+  padding: 0 20px;
+  color: $white;
+  
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    &__user-name {
+      font-size: 16px;
+      float: left;
+    }
+    &__menu {
+      display: flex;
+      &__group-new{
+        &__btn{
+          &--edit{
+            color: $white;
+          }
+          
+        } 
+      }
+      &__user-edit{
+        &__btn{
+          &--cog{
+            color: $white;
+          }
+          
+        } 
+      }
+      
+    }
+  }
+
+
+}

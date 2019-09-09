@@ -1,0 +1,15 @@
+.header-right {
+  height: 82px;
+  width: calc(100vw - 300px)
+
+  &__logo{
+    float: left;
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+  &__btn{
+    float: left;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+}
