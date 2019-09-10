@@ -1,0 +1,31 @@
+.content
+  .right-header
+    .right-header__box
+      .right-header__box__now-group
+        test-group
+      .right-header__box__people
+        aaa
+      = link_to "Edit", edit_group_path(current_user), class: "right-header__btn--edit"
+        
+                
+  .messages
+    .messages__message
+      .messages__message__post
+        .messages__message__post__poster
+          aaa
+        .messages__message__post__date
+          2019/09/07 16:59:01
+    .messages__message__text
+      aaaa
+        
+
+  .form
+    %form.new-message
+      .input-box
+        %input.input-box__text{name: "message", placeholder: "type a message", type: "text", width: "100"}
+        %label.upload-label{for: "message_image"}
+          %span
+            %i.fa.fa-picture-o
+          %input.upload-label__file{type: "file", name: "message[image]", id: "message_image"}
+      %input.submit-btn{name: "commit", value: "Send", type: "submit"}
+                
