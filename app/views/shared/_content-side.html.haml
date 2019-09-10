@@ -12,9 +12,9 @@
             = fa_icon "cog", class: "post-icon"
             
   .groups
-    .groups__group
-      - current_user.groups.each do |group|
-        = link_to "#" do
+    - current_user.groups.each do |group|
+      .groups__group
+        = link_to groups_path(group) do
           .groups__group__group-name
             = group.name
           .groups__group__message
