@@ -1,6 +1,6 @@
 # app/uploaders/image_uploader.rb
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::Minimagick
+  include CarrierWave::MiniMagick
 
   storage :file
 
@@ -13,7 +13,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # thumb バージョン(width 400px x height 200px)
   version :thumb do
-    process :resize_to_fit => [800, 800]
+    process resize_to_fit: [800, 800]
   end
 
   # 許可する画像の拡張子

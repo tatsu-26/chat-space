@@ -20,11 +20,15 @@
       margin-bottom: 15px;
 
     }
-    &__people{
+    &__list{
+      display: flex;
       height: 12px;
       color: $people-color;
+      &__people{
 
+      }
     }
+
   }
   &__btn--edit{
     display: flex;
@@ -43,6 +47,7 @@
   margin: 46px 40px 0 40px;
   background-color: $wrapper-color;
   height: calc(100vh - 220px);
+  overflow: scroll;
   &__message{
       padding-bottom: 40px;
     &__post{
@@ -60,7 +65,7 @@
         margin-left: 10px; 
       }
     }
-    &__text{
+    &__lower__text{
       height: 14px;
       font-weight: bold;
       color: $text-color;
@@ -68,47 +73,50 @@
   }
 }
 
-.form{
+.form {
   padding: 20px 40px;
   background-color: #ddd; 
   height: 50px;
-  
-}
-
-.input-box{
-  width: calc(100% - 115px);
-  float: left;
-  position: relative;
-  &__text{
+  display: flex;
+  &__message{
+    width: 900px;
+    position: relative;
     background-color: $white;
     height: 50px;
     border-style: none;
     padding: 0 10px;
-    width: calc(100% - 15px);
-  }
-}
-.upload-label{
-  height: 50px;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  &__file{ 
-    display: none;
+    
   
   }
+  &__mask{
+    background-color: $white;
+    padding-right: 10px;
+    &__image{
+      height: 50px;
+      cursor: pointer;
+      line-height: 50px;
+    }
+  }
+  &__submit{
+    width: 100px;
+    background-color: $blue;
+    margin-left: 15px;
+    height: 50px;
+    line-height: 50px;
+    color: $white;
+  }
+}
+
+.form form{
+  display: flex;
+}
+
+.hidden{ 
+  display: none;
+
 }
 .fa{
   display: inline-block;
 }
 
-.submit-btn{
-  width: 100px;
-  float: left;
-  background-color: $blue;
-  margin-left: 15px;
-  height: 50px;
-  line-height: 50px;
-  color: $white;
-}
 

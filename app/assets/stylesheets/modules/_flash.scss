@@ -1,11 +1,12 @@
-@import "variable";
-.falsh {
-  color: $white;
+
+ 
+.notice{
+  color: white;
   text-align: center;
-  &__alert{
-    background-color: #FF4500;
-  }
-  &__notice{
-    background-color: $blue;
-  }
+  background-color: $blue;
+}
+.alert{
+  background-color: $alert-color;
+  color: white;
+  text-align: center;
 }

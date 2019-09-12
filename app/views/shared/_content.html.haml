@@ -5,28 +5,31 @@
         test-group
       .right-header__box__people
         aaa
-      = link_to "Edit", edit_group_path(current_user), class: "right-header__btn--edit"
+    = link_to "Edit", edit_group_path(current_user), class: "right-header__btn--edit"
 
         
                 
   .messages
-    .messages__message
-      .messages__message__post
-        .messages__message__post__poster
-          aaa
-        .messages__message__post__date
-          2019/09/07 16:59:01
-    .messages__message__text
-      aaaa
+    - @messages.each do |message|
+      .messages__message
+        .messages__message__post
+          .messages__message__post__poster
+            = message.user.name
+          .messages__message__post__date
+            = message.creates_at.strftime("%Y/%m/%d %H:%M")
+      .messages__message__lower
+        - if message.content.present?
+          %p.messages__message__lower__text
+            = message.content
+        = image_tag message.image.url, class: "messages__message__lower__image" if message.image.present?
         
 
   .form
-    %form.new-message
-      .input-box
-        %input.input-box__text{name: "message", placeholder: "type a message", type: "text", width: "100"}
-        %label.upload-label{for: "message_image"}
-          %span
-            %i.fa.fa-picture-o
-          %input.upload-label__file{type: "file", name: "message[image]", id: "message_image"}
-      %input.submit-btn{name: "commit", value: "Send", type: "submit"}
-                
+    = form_for [@group, @message] do |f|
+      = f.text_field :text, class: "form__message", placeholder: "type a message"
+      .form__mask
+        = f.label :image, class: "form__mask__image" do
+          = fa_icon "picture-o", class: "fa"
+          = f.file_field :image, class: "hidden"
+      = f.submit "Send", class: "form__submit"
+              
