@@ -1,4 +1,27 @@
 .wrapper
   = render "shared/content-side"
-  = render "shared/content"
-  
+  .content
+    .right-header
+      .right-header__box
+        .right-header__box__now-group
+          = @group.name
+        .right-header__box__list
+          member:
+          - @group.group_users.each do |group_user|
+            .right-header__box__list__people
+              = group_user.user.name
+      = link_to "Edit", edit_group_path(current_user), class: "right-header__btn--edit"
+
+        
+    .messages
+      = render @messages
+
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :text, class: "form__message", placeholder: "type a message"
+        .form__mask
+          = f.label :image, class: "form__mask__image" do
+            = fa_icon "picture-o", class: "fa"
+            = f.file_field :image, class: "hidden"
+        = f.submit "Send", class: "form__submit"
+                
