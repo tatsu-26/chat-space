@@ -12,6 +12,20 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+public/uploads/
+404.html
+422.html
+500.html
+apple-touch-icon-precomposed.png
+apple-touch-icon.png
+favicon.ico
+robots.txt
+spec
+test
+tmp
+vender
+
+
 
 # Ignore Byebug command history file.
 .byebug_history
