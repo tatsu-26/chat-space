@@ -12,8 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-public/uploads
-bin/uploads
+public/uploads/
 404.html
 422.html
 500.html
