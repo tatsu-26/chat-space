@@ -8,7 +8,7 @@ $(function(){
                       ${message.user_name}
                     </div>
                     <div class="messages__message__post__date">
-                      ${message.update}
+                      ${message.time}
                     </div>
                   </div>
                   <div class="messages__message__lower">
