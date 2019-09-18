@@ -10,7 +10,7 @@
           - @group.group_users.each do |group_user|
             .right-header__box__list__people
               = group_user.user.name
-      = link_to "Edit", edit_group_path(current_user), class: "right-header__btn--edit"
+      = link_to "Edit", edit_group_path(@group.id), class: "right-header__btn--edit"
 
         
     .messages
