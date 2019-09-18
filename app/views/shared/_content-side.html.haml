@@ -10,7 +10,6 @@
         %li.left-heaser__box__menu__user-edit
           =link_to edit_user_path(current_user), class: "left-header__box__menu__user-edit__btn left-header__box__menu__user-edit__btn--cog" do
             = fa_icon "cog", class: "post-icon"
-            
   .groups
     - current_user.groups.each do |group|
       .groups__group
