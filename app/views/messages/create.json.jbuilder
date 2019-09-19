@@ -1,3 +1,4 @@
+json.(@message, :text, :image)
 json.text @message.text
 json.user_name @message.user.name
 json.time @message.created_at.to_s
