@@ -6,7 +6,7 @@ working_directory app_path
 
 pid "#{app_path}/tmp/pids/unicorn.pid"
 
-listen 3000
+listen "#{app_path}/tmp/sockets/unicorn.sock"
 
 
 stderr_path "#{app_path}/log/unicorn.stderr.log"
@@ -28,7 +28,7 @@ before_fork do |server, worker|
     ActiveRecord::Base.connection.disconnect!
 
   if run_once
-    run_once = false
+    run_once = false 
   end
 
   old_pid = "#{server.config[:pid]}.oldbin"
