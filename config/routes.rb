@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "groups#index"
-  resources :users, only: [:search, :edit] do
+  resources :users, only: [:search, :edit, :update] do
     collection do
       get 'search'
     end
