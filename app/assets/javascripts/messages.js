@@ -17,7 +17,6 @@ $(function(){
                       ${image}
                     </div>
                   </div>`
-    
     return html;
   };
   
