@@ -14,7 +14,7 @@ $(function(){
                       <p class="messages__message__lower__text">
                         ${message.text}
                       </p>
-                      
+                      ${image}
                     </div>
                   </div>`
     
