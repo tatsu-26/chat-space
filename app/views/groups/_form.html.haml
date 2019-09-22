@@ -26,7 +26,8 @@
             %p.chat-group-form__user__name
             = group_user.user.name
             = f.hidden_field :user_ids, name: "group[user_ids][]", :value => group_user.user.id
-            .user-search-delete.chat-group-user__btn.chat-group-user__btn--delete{"data-user-id" => "user_id", "data-user-name" => "user_name"} 削除
+            - if group_user.user.id != current_user.id
+              .user-search-delete.chat-group-user__btn.chat-group-user__btn--delete{"data-user-id" => "user_id", "data-user-name" => "user_name"} 削除
   .chat-group-form__field.clearfix
     .chat-group-form__field__left
     .chat-group-form__field__right

@@ -1,6 +1,6 @@
 $(function(){
   var buildMessageHTML = function(message) {
-    (image = (message.image) ? `<image src="${message.image}", class="messages__message__lower__image"></image>` : "" );
+    (image = (message.image) ? `<image src="${message.image}">` : "" );
       var html = `<div class="messages__message" data-message-id="${message.id}">
                     <div class="messages__message__post">
                       <div class="messages__message__post__poster">
