@@ -21,6 +21,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %W[jpg jpeg gif png]
   end
+  process resize_to_fit: [300, 200]
 
   # 変換したファイルのファイル名の規則
   def filename
