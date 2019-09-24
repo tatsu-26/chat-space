@@ -15,7 +15,7 @@
   
   &__box{
     &__now-group{
-      height: 20px;
+      font-size: 20px;
       color: #333333;
       padding-top: 35px;
       margin-bottom: 15px;
@@ -23,7 +23,7 @@
     }
     &__list{
       display: flex;
-      height: 12px;
+      font-size: 12px;
       color: $people-color;
       &__people{
         margin: 0 10px;
@@ -34,7 +34,7 @@
   &__btn--edit{
     display: flex;
     height: 40px;
-    margin: 28px;
+    margin-top: 30px;
     padding: 0 20px;
     border: solid 1px $blue;
     position:absolute;
@@ -45,9 +45,9 @@
 }
 
 .messages{
-  margin: 46px 40px 0 40px;
+  padding: 46px 40px;
   background-color: $wrapper-color;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 264px);
   overflow: scroll;
   &__message{
       padding-bottom: 40px;
@@ -55,21 +55,21 @@
         display: flex;
         margin-bottom: 10px;
       &__poster{
-        height: 16px;
+        font-size: 16px;
         font-weight: bold;
         color: $text-color;
         
       }
       &__date{
-        height: 12px;
+        font-size: 12px;
         color: $people-color;
         margin-left: 10px; 
       }
     }
     &__lower__text{
-      height: 14px;
-      font-weight: bold;
+      font-size: 14px;
       color: $text-color;
+      margin-bottom: 10px;
     }
     &__lower__image{
       margin-top: 10px;
@@ -84,11 +84,9 @@
   height: 50px;
   &__message{
     background-color: $white;
-    height: 50px;
     border-style: none;
     padding: 0 10px;
     width: 100%;
-  
   }
   &__mask{
     background-color: $white;
