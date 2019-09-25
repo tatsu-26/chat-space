@@ -61,14 +61,15 @@ $(function(){
         var insertHTML = "";
         messages.forEach(function (message) {
         insertHTML = buildMessageHTML(message);
-        $(".messages").append(insertHTML)
+        if ($(".messages").append(insertHTML)){
+          $(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, "fast")
+          }
         })
-        $(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, "fast")
       })
       .fail(function() {
         alert("error");
       });
     }
   }
-  
+  setInterval(reloadMessages, 5000);
 });
